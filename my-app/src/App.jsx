@@ -1,37 +1,28 @@
 
+import Alert from './Alert';
 import './App.css'
-import Button from './Button';
-import SearchBar from './SearchBar';
-import TutorsList from './TutorsList';
-import Menu from './assets/Menu';
-import Books from './books/Books';
+import Card from './Card';
+import Card2 from './Card2';
+
 
 function App() {
 
-  const isVisible = true;
+  const name = 'Sergiu';
 
-  const menuItems = [
-    { id:0,
-      name: 'Acasa' 
-  },
-    { id:1,
-      name: 'Despre noi'
-  },
-
-    { id:2,
-      name: 'Constact'
-  }
-  ];
 
   return (
     <div>
-      
-      <Menu items= {menuItems}/>
-      <Button text= 'Button' icon='&' handleClick={() => {console.log("Scrie ceva")}} />
-      <SearchBar text={'Ar'} isVisible={isVisible}  price= {23}/>
-      <TutorsList/>
-      <Books/>
+      <Alert>Mesajul este fara variant !!</Alert>
+      <Alert variant='success'>Mesajul este cu succes !!</Alert>
+      <Alert variant='error'>Mesajul este cu eroare !!</Alert>
 
+
+      <p className= 'alert warning'>Acest mesaj nu ar trebui sa aiba stilizare </p>
+
+      <Card></Card>
+      <Card2></Card2>
+
+      <p className='red'>Text cu rosu din app.jsx</p>
     </div>
   )
 }
